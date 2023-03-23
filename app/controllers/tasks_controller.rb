@@ -13,7 +13,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task=Task.new(task_params)
+    @task = Task.new(task_params)
     
     if @task.save
       flash[:success]='Taskが正常に登録されました'
@@ -50,7 +50,7 @@ class TasksController < ApplicationController
     @task=Task.find(params[:id])
   end
   
-  def task_parmas
-    parmas.require(:task).permit(:content)
+  def task_params
+    params.require(:task).permit(:content)
   end
 end
