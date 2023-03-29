@@ -49,7 +49,10 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: taklist_production
-  username: taklist
-  password: <%= ENV['TAKLIST_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: db.mxgaewetuniudvhecabz.supabase.co
+  database: postgres
+  username: postgres
+  password: <%= ENV['SUPABASE_DATABASE_PASSWORD'] %>
