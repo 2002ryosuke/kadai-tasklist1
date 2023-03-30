@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
   include SessionsHelper
 
+
   private
   
   def require_user_logged_in
